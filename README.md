@@ -1,2 +1,2 @@
 # SQL
-Algumas das tabelas que já usei/uso em meus projetos de dados
+Algumas das tabelas de modelagem de dados dimensional que já usei/uso em meus projetos de dados
