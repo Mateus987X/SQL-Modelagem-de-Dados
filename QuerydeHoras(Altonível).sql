@@ -1,3 +1,11 @@
+/-- Query para calcular horas trabalhadas a partir de marcações de ponto
+-- Considera as marcações de ponto, calcula as horas trabalhadas e ajusta erros de cálculo
+-- caso sejam maiores que 10 horas.
+-- A consulta final retorna os dados formatados e com as horas trabalhadas em segundos.
+-- A consulta é baseada na tabela SP8010, que contém as marcações de ponto.
+-- A consulta filtra as marcações a partir de 01/01/2023 e ignora motivos de rejeição automática e exclusão manual.
+
+
 WITH Ponto AS (
     SELECT 
         CAST(P8_DATA AS varchar)  + '|' + FORMAT(P8_HORA, '00') ORDENADOR,
